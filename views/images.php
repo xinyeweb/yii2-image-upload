@@ -1,7 +1,9 @@
 <?php
-use app\helpers\Html;
 
 /* @var $this yii\web\View */
+use xinyeweb\images\FuncHelper;
+use yii\helpers\Html;
+
 /* @var $model yii\db\ActiveRecord */
 /* @var $saveDB integer */
 /* @var $attribute string */
@@ -46,7 +48,7 @@ if (!empty($data)) {
             }
             ?>
             <div class="fileupload-item thumbnail">
-                <img src="<?=\app\helpers\Html::src($picture['path'])?>" />
+                <img src="<?=FuncHelper::src($picture['path'])?>" />
                 <span class="fileupload-del">删除</span>
                 <input type="hidden" name="<?=$field?>[]" value="<?=$picture['id']?>" />
             </div>
